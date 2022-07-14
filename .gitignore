@@ -1,0 +1,13 @@
+*__pycache__*
+.vscode
+
+train_log*
+convert_models*
+
+local*/*
+
+run*.sh
+
+eval_res/*
+
+path_my.py
