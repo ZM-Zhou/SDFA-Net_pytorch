@@ -12,8 +12,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
-
-from path_my import Path
+try:
+    from path_my import Path
+except:
+    Path = None
 
 # from mmcv_custom import load_checkpoint
 # from mmseg.utils import get_root_logger
@@ -60,9 +62,14 @@ def get_orgwintrans_backbone(backbone_name, is_pretrained):
     # load pretrained weights
     if is_pretrained:
         if 'Swin' in backbone_name:
+            if Path is None:
+                print('path_my.py is not existing')
+                return backbone_network, enc_ch_num
+
             if not os.path.exists(Path.get_path_of('swin')):
-                print('pretrained Swin backbone is not exsit in {}'
+                print('pretrained Swin backbone is not existing in {}'
                       .format(Path.get_path_of('swin')))
+                return backbone_network, enc_ch_num
             pretrained_dict = torch.load(Path.get_path_of('swin'),
                                          map_location=torch.device('cpu'))
             model_dict = backbone_network.state_dict().copy()

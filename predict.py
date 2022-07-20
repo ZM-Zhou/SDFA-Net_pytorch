@@ -171,7 +171,7 @@ def predict():
         else:
             for r, ds, fs in os.walk(opts.image_path):
                 for f in fs:
-                    if f.endswith('.png') or f.endswith('.jpg'):
+                    if f.endswith('.png') or f.endswith('.jpg') or f.endswith('.bmp'):
                         img = Image.open(os.path.join(r, f))
                         img = img.convert('RGB')
                         img = normalize(to_tensor(resize(img))).unsqueeze(0)
