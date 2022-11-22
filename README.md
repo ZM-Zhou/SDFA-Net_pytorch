@@ -11,10 +11,11 @@ conda activate pytorch170cu10
 ## Pre-trained models
 |Model Name|Dataset(s)|Abs Rel.|Sq Rel.|RMSE|RMSElog|A1|
 |----------|----------|--------|-------|----|-------|--|
-|[SDFA-Net-SwinTM_384](https://pan.baidu.com/s/1sqPV3WXqzoT3VzO1ZkNGSg)|K|0.090|0.538|3.896|0.169|0.906|
-|[SDFA-Net-SwinTM_CS+K_384](https://pan.baidu.com/s/1m2ybgWahi6EmcOoU1cYDWg)|CS+K|0.085|0.531|3.888|0.167|0.911|
+|SDFA-Net-SwinTM_stage1_384 [Baidu](https://pan.baidu.com/s/1E7YXzMClwiBLn4T5CNzn3A)/[Google](https://drive.google.com/file/d/1wpOj39KGgKGHpG_Z_MRGAUgyxF__3sVz/view?usp=sharing)|K|0.100|0.631|4.090|0.183|0.890|
+|SDFA-Net-SwinTM_384 [Baidu](https://pan.baidu.com/s/1sqPV3WXqzoT3VzO1ZkNGSg)/[Google](https://drive.google.com/file/d/1RxCJ6lz6MpeHIPLNFmm1hJikeDUOBXu8/view?usp=sharing)|K|0.090|0.538|3.896|0.169|0.906|
+|SDFA-Net-SwinTM_CS+K_384 [Baidu](https://pan.baidu.com/s/1m2ybgWahi6EmcOoU1cYDWg)/[Google](https://drive.google.com/file/d/11QJJ1WEQ8Z80JUz7zCmq9t9LBMVvzqYD/view?usp=sharing)|CS+K|0.085|0.531|3.888|0.167|0.911|
 
-* **code for all the download links is `sdfa`**
+* **code for all the download links of Baidu is `sdfa`**
 ## Prediction
 To predict depth maps for your images, please firstly download the pretrained model from the column named `Model Name` in the above table. After unzipping the downloaded model, you could predict the depth maps for your images by
 ```
@@ -157,4 +158,4 @@ CUDA_VISIBLE_DEVICES=0 python\
  ```
 
 ## Acknowledgment
-Some of this repo come from [Monodepth2](https://github.com/ZM-Zhou/SMDE-Pytorch), [AlignSeg](https://github.com/speedinghzl/AlignSeg) and [Swin-transformer](https://github.com/microsoft/Swin-Transformer).
+Some of this repo come from [Monodepth2](https://github.com/nianticlabs/monodepth2), [AlignSeg](https://github.com/speedinghzl/AlignSeg) and [Swin-transformer](https://github.com/microsoft/Swin-Transformer).
