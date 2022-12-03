@@ -1,5 +1,17 @@
 # SDFA-Net_pytorch
-This is the official repo for our work 'Self-distilled Feature Aggregation for Self-supervised Monocular Depth Estimation' (ECCV 2022).
+This is the official repo for our work 'Self-distilled Feature Aggregation for Self-supervised Monocular Depth Estimation' (ECCV 2022).  
+[Paper](https://link.springer.com/chapter/10.1007/978-3-031-19769-7_41)  
+Citation information:  
+```
+@inproceedings{zhou2022self,
+  title={Self-distilled feature aggregation for self-supervised monocular depth estimation},
+  author={Zhou, Zhengming and Dong, Qiulei},
+  booktitle={European Conference on Computer Vision},
+  pages={709--726},
+  year={2022},
+  organization={Springer}
+}
+```
 
 ## Setup
 We built and ran the repo with CUDA 10.2, Python 3.7.11, and Pytorch 1.7.0. For using this repo, we recommend creating a virtual environment by [Anaconda](https://www.anaconda.com/products/individual). Please open a terminal in the root of the repo folder for running the following commands and scripts.
